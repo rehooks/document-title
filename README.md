@@ -1,6 +1,6 @@
-# `@rehooks/DocumentTitle`
+# `@rehooks/document-title`
 
-> React hook for DocumentTitle
+> React hook for updating the document-title
 
 > **Note:** This is using the new [React Hooks API Proposal](https://reactjs.org/docs/hooks-intro.html)
 > which is subject to change until React 16.7 final.
@@ -10,17 +10,16 @@
 ## Install
 
 ```sh
-yarn add @rehooks/DocumentTitle
+yarn add @rehooks/document-title
 ```
 
 ## Usage
 
 ```js
-import useDocumentTitle from '@rehooks/DocumentTitle';
+import useDocumentTitle from '@rehooks/document-title';
 
 function MyComponent() {
-  let value = useDocumentTitle();
-  // value == DocumentTitle
+  useDocumentTitle('Page Title');
   return <div/>;
 }
 ```
