@@ -1,3 +1,4 @@
 interface DocumentTitle {}
+declare function useDocumentTitle(title: string): DocumentTitle;
 
-export default function useDocumentTitle(title: string): DocumentTitle;
+export default useDocumentTitle;
