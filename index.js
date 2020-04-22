@@ -1,10 +1,16 @@
 'use strict';
-let { useEffect } = require('react');
+let { useState, useEffect } = require('react');
 
-function useDocumentTitle(title) {
+function useDocumentTitle(title, retainOnUnmount = false) {
+  const [defaultTitle, ,] = useState(document.title);
+
   useEffect(() => {
     document.title = title;
-  }, [title])
+
+    return () => {
+      if (!retainOnUnmount) document.title = defaultTitle;
+    };
+  }, [title]);
 }
 
 module.exports = useDocumentTitle;
