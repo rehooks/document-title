@@ -1,14 +1,14 @@
 'use strict';
-let { useState, useEffect } = require('react');
+let { useRef, useEffect } = require('react');
 
 function useDocumentTitle(title, retainOnUnmount = false) {
-  const [defaultTitle, ,] = useState(document.title);
+  const defaultTitle = useRef(document.title);
 
   useEffect(() => {
     document.title = title;
 
     return () => {
-      if (!retainOnUnmount) document.title = defaultTitle;
+      if (!retainOnUnmount) document.title = defaultTitle.current;
     };
   }, [title]);
 }
