@@ -1,4 +1,4 @@
 interface DocumentTitle {}
-declare function useDocumentTitle(title: string): DocumentTitle;
+declare function useDocumentTitle(title: string, retainOnUnmount?: boolean): DocumentTitle;
 
 export default useDocumentTitle;

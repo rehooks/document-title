@@ -6,11 +6,15 @@ function useDocumentTitle(title, retainOnUnmount = false) {
 
   useEffect(() => {
     document.title = title;
-
-    return () => {
-      if (!retainOnUnmount) document.title = defaultTitle.current;
-    };
   }, [title]);
+
+  useEffect(() => {
+    return () => {
+      if (!retainOnUnmount) {
+        document.title = defaultTitle.current;
+      }
+    };
+  }, []);
 }
 
 module.exports = useDocumentTitle;
