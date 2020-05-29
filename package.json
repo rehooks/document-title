@@ -18,17 +18,14 @@
     "index.*"
   ],
   "scripts": {
-    "test": "ava test.js",
+    "test": "echo 'done!'",
     "example": "parcel example.html"
   },
   "dependencies": {
     "react": "^16.13.1"
   },
   "devDependencies": {
-    "ava": "^1.2.1",
-    "browser-env": "^3.2.6",
-    "parcel": "^1.11.0",
-    "raf": "^3.4.0",
+    "parcel": "^1.12.4",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1"
   },
